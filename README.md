@@ -15,7 +15,7 @@ We have made significant strides in the algebraic semantics of I/O logic. Initia
 
 The following layers are crucial for implementing the full picture of I/O logics in HOL:
 
-![Flowchart](./path_to_your_image/flochart.JPG)
+![Flowchart](./flochart.JPG)
 
 This implementation builds on David's work on basic topology, specifically:
 - `base.thy`
