@@ -23,7 +23,7 @@ This approach leverages the Stone representation of Boolean algebra as an algebr
 ## Key Points for Implementation
 
 1. **Canonical Extensions**:
-    - Definition 4.5 is implemented in HOL, but proving the Stone representation theorem remains challenging. For our purposes, the theorem isn't essential since we work directly with an algebra of sets.
+    - Definition 4.5 (see the paper) is implemented in HOL, but proving the Stone representation theorem remains challenging. For our purposes, the theorem isn't essential since we work directly with an algebra of sets.
 
 2. **Extending the Stone Theorem**:
     - We primarily need Proposition 2.6, Proposition 2.7, and Lemma 4.7 for extending the Stone theorem to I/O logic and slanted algebra representations. While Propositions 2.6 and 2.7 are partially implemented, their utility for modal translations of I/O logics is uncertain. Current experiments rely on the definitions of slanted and Boolean algebras.
@@ -52,7 +52,7 @@ Feel free to explore the files and contribute to the project.
 
 ## Contributing
 
-We welcome contributions and discussions on this long-term project on I/O logics. Please open an issue or pull request for any suggestions or improvements.
+We welcome contributions and discussions on this project. Please open an issue or pull request for any suggestions or improvements.
 
 ## License
 
