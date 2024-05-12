@@ -7,17 +7,13 @@ _De Domenico, A., Farjami, A., Manoorkar, K., Palmigiano, A., Panettiere, M., & 
 
 ## Progress and Approach
 
-### Recent Progress
-
-We have made significant strides in the algebraic semantics of I/O logic. Initially, we discussed subordination algebras, and now we have a complete algebraic account of I/O logics.
-
 ### Implementation Overview
 
 The following layers are crucial for implementing the full picture of I/O logics in HOL:
 
 ![Flowchart](./flochart.JPG)
 
-This implementation builds on David's work on basic topology, specifically:
+This implementation builds on David Fuenmayor's work on basic topology, specifically:
 - `base.thy`
 - `boolean_algebra.thy`
 - `boolean_algebra_infinitary.thy`
@@ -39,9 +35,6 @@ This approach leverages the Stone representation of Boolean algebra as an algebr
 
 The initial implementation appears promising, but the effectiveness of duality techniques for modal translations of various I/O logics in theorem provers and Isabelle remains unclear. Additionally, automating I/O logic implementation is motivated by the non-monotonicity of permission.
 
-## Collaboration and Contact
-
-I am reaching out to see if you, David, or any of your students might be interested in collaborating on this algebraic approach and its implementation. I am currently based in Luxembourg, but I am open to visiting Bamberg University for a few days to collaborate further.
 
 ## Repository Structure
 
