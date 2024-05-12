@@ -18,7 +18,7 @@ This implementation builds on David Fuenmayor's work on basic topology, specific
 - `boolean_algebra.thy`
 - `boolean_algebra_infinitary.thy`
 
-This approach leverages the Stone representation of Boolean algebra as an algebra of sets. Feedback from David on `subordination_algebra.thy` has been incorporated.
+This approach leverages the Stone representation of Boolean algebra as an algebra of sets.
 
 ## Key Points for Implementation
 
@@ -43,6 +43,10 @@ The initial implementation appears promising, but the effectiveness of duality t
 - `boolean_algebra_infinitary.thy`
 - `subordination_algebra.thy`
 - `slanted_obligation.thy`
+- `contac_algebra.thy`
+- `slanted_permission`
+- `static_permission`
+- `dynamic_permission`
 
 Feel free to explore the files and contribute to the project.
 
