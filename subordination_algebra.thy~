@@ -49,6 +49,7 @@ lemma WOSF: "WO \<rho> \<longrightarrow> (SF \<rho> \<longrightarrow> Top \<rho>
 definition "up_directed S \<equiv> \<forall>X Y. (S X \<and> S Y) \<longrightarrow> (\<exists>Z. S Z \<and> X \<^bold>\<preceq> Z \<and> Y \<^bold>\<preceq> Z)"
 definition "down_directed S \<equiv> \<forall>X Y. (S X \<and> S Y) \<longrightarrow> (\<exists>Z. S Z \<and> X \<^bold>\<succeq> Z \<and> Y \<^bold>\<succeq> Z)"
 
+(*David: verified some (maybe useful?) properties*)
 lemma aux1: "DD \<rho> \<Longrightarrow> down_directed (\<lambda>x. \<rho> a x)" by (simp add: DD_def down_directed_def)
 lemma aux2: "UD \<rho> \<Longrightarrow> up_directed (\<lambda>x. \<rho> x a)" by (simp add: UD_def up_directed_def)
 
@@ -142,10 +143,10 @@ lemma Prop271ii: "((complete_boolean_algebra A \<and> sub_boolean_algebra B A \<
   unfolding complete_boolean_algebra_def sub_boolean_algebra_def down_directed_def closed_def oops  (*needs to try more*)
 
 lemma Prop271iii: "( (complete_boolean_algebra A \<and> sub_boolean_algebra B A \<and> closed cl1 A B \<and> closed cl2 A B \<and> B b )\<longrightarrow>
-( ((cl1\<^bold>\<and>cl2) \<^bold>\<preceq> b) \<longrightarrow> (\<exists> a1 a2. ((B a1 \<and> B a2) \<and> ((a1 \<^bold>\<and> a2) \<^bold>\<preceq> b)\<and> (cl1 \<^bold>\<preceq> a1) \<and> (cl2 \<^bold>\<preceq> a2))  ) ) )" oops (*needs to try more*)
+( ((cl1\<^bold>\<and>cl2) \<^bold>\<preceq> b) \<longrightarrow> (\<exists> a1 a2. ((B a1 \<and> B a2) \<and> ((a1 \<^bold>\<and> a2) \<^bold>\<preceq> b)\<and> (cl1 \<^bold>\<preceq> a1) \<and> (cl2 \<^bold>\<preceq> a2))  ) ) )" oops
   
 lemma Prop271iv: "( (complete_boolean_algebra A \<and> sub_boolean_algebra B A \<and> closed cl1 A B \<and> closed cl2 A B \<and> open op A B )\<longrightarrow>
-( ((cl1\<^bold>\<and>cl2) \<^bold>\<preceq> op) \<longrightarrow> (\<exists> a1 a2 b. ((B a1 \<and> B a2 \<and> B b) \<and> ((a1 \<^bold>\<and> a2) \<^bold>\<preceq> b)\<and> (cl1 \<^bold>\<preceq> a1) \<and> (cl2 \<^bold>\<preceq> a2) \<and> (b \<^bold>\<preceq> op ) )  ) ) )" oops (*needs to try more*)
+( ((cl1\<^bold>\<and>cl2) \<^bold>\<preceq> op) \<longrightarrow> (\<exists> a1 a2 b. ((B a1 \<and> B a2 \<and> B b) \<and> ((a1 \<^bold>\<and> a2) \<^bold>\<preceq> b)\<and> (cl1 \<^bold>\<preceq> a1) \<and> (cl2 \<^bold>\<preceq> a2) \<and> (b \<^bold>\<preceq> op ) )  ) ) )" oops
   
 lemma Prop272ia: "( ((Extension B A) \<and> (U1 \<sqsubseteq> B) \<and> (U2 \<sqsubseteq> B) \<and> (nonEmpty U1 ) \<and> up_directed U1) \<and> ((nonEmpty U2 ) \<and> up_directed U2) )
 \<longrightarrow> (up_directed (\<lambda>x. U1 x \<or> U2 x) ) "  oops (* We need to encode the extension of set A for this theorem or use the following formulation*)
@@ -154,10 +155,10 @@ lemma Prop272ib: "( (join_closed A) \<and> (sub_boolean_algebra U1 A) \<and> (su
 \<longrightarrow> (up_directed (\<lambda>x. U1 x \<or> U2 x) ) "  by (metis (no_types, lifting) L13 L3 L5 boolean_algebra_def2 sub_boolean_algebra_def up_directed_def)
    
 lemma Prop272ii: "((Extension B A \<and> open op1 A B \<and> open op2 A B) \<and>
- ((U1 \<sqsubseteq> B) \<and> (U2 \<sqsubseteq> B)\<and> (up_directed U1)\<and> (up_directed U2))\<longrightarrow> ((op1 \<^bold>\<approx> \<^bold>\<Or>U1) \<and> (op2 \<^bold>\<approx> \<^bold>\<Or>U2))\<longrightarrow> (open (op1 \<^bold>\<or> op2) A B))"  oops (*needs to try more*)
+ ((U1 \<sqsubseteq> B) \<and> (U2 \<sqsubseteq> B)\<and> (up_directed U1)\<and> (up_directed U2))\<longrightarrow> ((op1 \<^bold>\<approx> \<^bold>\<Or>U1) \<and> (op2 \<^bold>\<approx> \<^bold>\<Or>U2))\<longrightarrow> (open (op1 \<^bold>\<or> op2) A B))"  oops
 
 lemma Prop272iii:  "( (Extension B A \<and> open op1 A B \<and> open op2 A B \<and> B a )\<longrightarrow>
-( (a \<^bold>\<preceq> (op1 \<^bold>\<or> op2 )) \<longrightarrow> (\<exists> b1 b2. ((B b1 \<and> B b2) \<and> (a \<^bold>\<preceq> (b1 \<^bold>\<or> b2))\<and> (b1 \<^bold>\<preceq> op1) \<and> (b2 \<^bold>\<preceq> op2))  ) ) )" (*needs to try more*)
+( (a \<^bold>\<preceq> (op1 \<^bold>\<or> op2 )) \<longrightarrow> (\<exists> b1 b2. ((B b1 \<and> B b2) \<and> (a \<^bold>\<preceq> (b1 \<^bold>\<or> b2))\<and> (b1 \<^bold>\<preceq> op1) \<and> (b2 \<^bold>\<preceq> op2))  ) ) )"
   unfolding Extension_def open_def compactIn_def denseIn_def oops
 
 
@@ -167,3 +168,37 @@ lemma Prop272iii:  "( (Extension B A \<and> open op1 A B \<and> open op2 A B \<a
 
  
 end 
+
+(*
+(*Subordination relation as constant*)
+consts sub :: "('w \<sigma>,'w \<sigma>)\<rho>" (infixr "\<prec>" 60)
+(*Maybe we should be explicit for \<prec> on boolean_algebra *)
+consts ar_Bool_al:: "'w \<sigma> \<Rightarrow> bool" (* an arbitary Boolean algebra*)
+consts ar_element:: "'w \<sigma>"         (* an arbitary elemnt in the Boolean algebra*)
+axiomatization where
+A1: "boolean_algebra ar_Bool_al" and
+A2: "\<forall>a b. a \<prec> b \<longrightarrow> ar_Bool_al a \<and> ar_Bool_al b" and
+A3: "ar_Bool_al ar_element"
+
+(*Finding quasi contermodel, can not prove yet *)
+lemma AND_DD: "AND sub \<longrightarrow> DD sub" nitpick  oops
+lemma OR_UD: "OR sub \<longrightarrow> UD sub" nitpick oops
+
+(*The image of a subordination relation is filter and the inverse image an ideal (?)*)
+lemma im_filter: "filter_boolean (\<lambda>x.  ar_element  \<prec> x )" nitpick oops
+lemma im_ideal : "ideal_boolean (\<lambda>x. x \<prec> ar_element )"   nitpick oops
+(*David: however, adding a reflexivity restriction we get no counterexample.
+  In case this is a theorem: is reflexivity really required?*)
+lemma "reflexive \<rho> \<and> (WO \<rho> \<and> DD \<rho>) \<longrightarrow>  (\<forall>x y. (\<rho> \<^bold>\<diamond> y  \<^bold>\<preceq> x) \<longrightarrow> \<rho> y x)"
+  (*nitpick[timeout=100]*) 
+  apply auto
+  unfolding slanted_diamond_def 
+  unfolding reflexive_def
+  unfolding WO_def DD_def
+  (* unfolding subset_def  *)
+  (* sledgehammer[verbose] *) oops (*sledgehammer magic not working yet ...*)
+lemma "(WO \<rho> \<and> DD \<rho> )  \<longrightarrow>  (\<forall>a b. (\<exists>x z y. \<rho> a x \<and> \<rho> b z \<and> (\<rho> (a\<^bold>\<or>b) y)) 
+\<longrightarrow>  ((\<rho> \<^bold>\<diamond> (a \<^bold>\<or> b)) \<^bold>\<preceq> ((\<rho> \<^bold>\<diamond> a) \<^bold>\<or> (\<rho> \<^bold>\<diamond> b)) \<longrightarrow> OR \<rho>))" 
+  unfolding WO_def and DD_def and  OR_def and slanted_diamond_def  oops (*Why counter model ?*)
+
+*)
