@@ -127,5 +127,21 @@ definition sub_closure::"('w \<sigma>,'w \<sigma>)\<rho> \<Rightarrow> ('w \<sig
 (\<forall>\<tau>. subordination \<tau> \<and> (\<forall> a x. \<rho> a x \<longrightarrow> \<tau> a x) \<longrightarrow> \<sigma> \<sqsubseteq> \<tau>) "
 *)
 
+(*  by (metis BA_dn L14 L9 join_def setequ_equ top_def) *)
+  
+  
+  
+(*  by (metis BA_deMorgan2 L13 SI_def Top_def WO_def compl_def meet_def subset_def) *)
+   
+
+  
+
+
+
+(* unfolding CS1_def CS2_def  contact_def  by (metis C11_def L13 SI_in_def bottom_def compl_def meet_def setequ_char setequ_equ subset_def) *)   
+
+
+
+(*CS1_def CS2_def C11_def C12_def C2_def C2'_def SI_def WO_def AND_def OR_def Bot_def Top_def *)
 
 end
