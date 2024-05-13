@@ -82,29 +82,8 @@ lemma " (SI \<rho> \<and> UD \<rho> \<and> SB \<rho> ) \<longrightarrow>((\<^bol
  
 
 
-(*lemma 4.7*)
-(*item 1(i)*)
-lemma "(SI \<rho> \<and> WO \<rho> \<and> DD \<rho> \<and> SF \<rho>) \<longrightarrow> down_directed (\<lambda>x. \<exists> y. \<rho> x y)"  by (metis SF_def down_directed_def inf_ext)
-lemma "((SI \<rho> \<and> WO \<rho> \<and> DD \<rho> \<and> SF \<rho>)\<and> down_directed D1) \<longrightarrow> (down_directed (\<lambda>x. (\<exists> y. (D1 y  \<and> \<rho> x y))) )"  
-  by (smt (verit, ccfv_threshold) SI_def down_directed_def inf_char)
 
-(*item 1(ii)*)
-lemma "((Extension B A) \<and> (SI \<rho> \<and> WO \<rho> \<and> DD \<rho> \<and> SF \<rho>) \<and> down_directed D1) \<longrightarrow> ((closed(\<^bold>\<And>(\<lambda>x. \<exists> y. D1 y \<and> \<rho> x y)) A B))" oops (*needs to try more*)
 
-(*item 1(iii)*)
-lemma "((Extension B A \<and> closed cl A B \<and>  (\<rho> \<^bold>\<diamond> cl) \<^bold>\<preceq> b ) \<and> B b) \<longrightarrow> (SI \<rho> \<and> WO \<rho> \<and> DD \<rho> \<and> SF \<rho>)
- \<longrightarrow> (\<exists> a. \<rho> a b \<and> cl \<^bold>\<preceq> a \<and> B a )" unfolding Extension_def closed_def  oops (*needs to try more*)
-
-(*item 1(iv)*)
-lemma " ((Extension B A \<and> closed cl A B \<and> open op A B \<and>  (\<rho> \<^bold>\<diamond> cl) \<^bold>\<preceq> op ) ) \<longrightarrow> (SI \<rho> \<and> WO \<rho> \<and> DD \<rho> \<and> SF \<rho>)
- \<longrightarrow> (\<exists> a b. \<rho> a b \<and> cl \<^bold>\<preceq> a \<and> b \<^bold>\<preceq> op)"  oops (*needs to try more*)
-
-(*item 2(i)*)
-lemma "((SI \<rho> \<and> WO \<rho> \<and> UD \<rho> \<and> SB \<rho>)\<and> up_directed U1) \<longrightarrow> (up_directed (\<lambda>x. (\<exists> y. (U1 y  \<and> \<rho> y x))) )" 
-  unfolding  WO_def up_directed_def using subset_def by blast
-   
-   
-  
 
 (*Proposition 5.1*)
 (*item 1(i)*)
