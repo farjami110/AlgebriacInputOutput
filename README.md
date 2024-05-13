@@ -3,7 +3,7 @@
 
 Welcome to the repository for implementing Input/Output (I/O) Logic in Higher-Order Logic (HOL). This project builds upon the algebraic approach to I/O logic as described in the paper:
 
-_De Domenico, A., Farjami, A., Manoorkar, K., Palmigiano, A., Panettiere, M., & Wang, X. (2024). Obligations and permissions, algebraically. arXiv preprint arXiv:2403.03148._
+_De Domenico, A., Farjami, A., Manoorkar, K., Palmigiano, A., Panettiere, M., & Wang, X. (2024). Obligations and permissions, algebraically. arXiv preprint arXiv:2403.03148. Available at [https://arxiv.org/abs/2403.03148](https://arxiv.org/abs/2403.03148)._
 
 ## Progress and Approach
 
