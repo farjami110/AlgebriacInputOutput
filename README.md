@@ -26,7 +26,7 @@ This approach leverages the Stone representation of Boolean algebra as an algebr
     - Definition 4.5 (see the paper) is implemented in HOL, but proving the Stone representation theorem remains challenging. For our purposes, the theorem isn't essential since we work directly with an algebra of sets.
 
 2. **Extending the Stone Theorem**:
-    - We primarily need Proposition 2.6, Proposition 2.7, and Lemma 4.7 for extending the Stone theorem to I/O logic and slanted algebra representations. While Propositions 2.6 and 2.7 are partially implemented, their utility for modal translations of I/O logics is uncertain. Current experiments rely on the definitions of slanted and Boolean algebras.
+    - We primarily need Proposition 2.6, Proposition 2.7, and Lemma 4.7 for extending the Stone theorem to I/O logic and slanted algebra representations. While Propositions 2.6 and 2.7 are partially implemented, their utility for modal translations of I/O logics in Isabelle is not used. Current experiments rely on the definitions of slanted and Boolean algebras.
 
 3. **Focus on Subordination and Contact Algebra**:
     - Currently, our focus is on subordination algebra and contact algebra. The rules characterizing contact algebra are interpreted in two ways: derivability and non-derivability (contraposition). In the paper, we use the non-derivability interpretation, while in Isabelle, we use the derivability interpretation.
