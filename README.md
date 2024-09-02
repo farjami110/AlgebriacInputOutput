@@ -51,7 +51,7 @@ The initial implementation appears promising, but the effectiveness of duality t
 - `static_permission`
 - `dynamic_permission`
 
-### Direct Implementation
+**Direct Implementation**
 
 - `IO_LogicalBase.thy`
 - `IO_Obligation.thy`
