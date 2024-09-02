@@ -31,6 +31,9 @@ This approach leverages the Stone representation of Boolean algebra as an algebr
 3. **Focus on Subordination and Contact Algebra**:
     - Currently, our focus is on subordination algebra and contact algebra. The rules characterizing contact algebra are interpreted in two ways: derivability and non-derivability (contraposition). In the paper, we use the non-derivability interpretation, while in Isabelle, we use the derivability interpretation.
 
+4. **Direct Implementation**
+    - It is straightforward to implement the corresponding modal algebras of Obligation, Negative Permission, and Dual-Negative Permission. In the direct implementation, we only consider the modal translation and disregard the duality procedure. The soundness results demonstrate that the algebraic encoding is efficient, comparable to the LogiKEy benchmark examples.
+
 ## Challenges and Future Work
 
 The initial implementation appears promising, but the effectiveness of duality techniques for modal translations of various I/O logics in theorem provers and Isabelle remains unclear. Additionally, automating I/O logic implementation is motivated by the non-monotonicity of permission.
@@ -47,6 +50,13 @@ The initial implementation appears promising, but the effectiveness of duality t
 - `slanted_permission`
 - `static_permission`
 - `dynamic_permission`
+
+### Direct Implementation
+
+- `IO_LogicalBase.thy`
+- `IO_Obligation.thy`
+- `IO_Permission.thy`
+- `IO_DualPermission.thy`
 
 Feel free to explore the files and contribute to the project.
 
